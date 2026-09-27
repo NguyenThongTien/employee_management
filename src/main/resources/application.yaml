@@ -1,0 +1,18 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /employee_management
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/employee_management
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+jwt:
+  signerKey: "WAQr7gZZNHutN0WsekklqqfF8sOo1Z0pUEkh9SyeWoN"
+  expiration: 3600
+  expiration-refresh: 36000
