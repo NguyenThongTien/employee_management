@@ -1,5 +1,7 @@
 package com.example.employee_management.dto.response;
 
+import com.example.employee_management.entity.Department;
+import com.example.employee_management.entity.Position;
 import com.example.employee_management.enums.AccountStatus;
 import com.example.employee_management.enums.Roles;
 import jakarta.persistence.EnumType;
@@ -24,4 +26,6 @@ public class AssignmentEmployeeResponse {
     String birthDay;
     @Enumerated(EnumType.STRING)
     Roles nameRole;
+    Department department;
+    Position position;
 }
