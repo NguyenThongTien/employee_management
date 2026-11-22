@@ -8,7 +8,11 @@ public enum ErrorCode {
     DEPARTMENT_NOT_FOUND(1005,"Không tìm thấY phòng ban nào"),
     DEPARTMENT_NOT_EXISTS(1006,"Phòng ban không tồn tại"),
     DEPARTMENT_NOT_DELETE(1007,"Không thể xoá phòng ban khi nó còn tồn tại"),
-    DEPARTMENT_ALREADY_EXISTS(1005,"Phòng ban đã tồn tại, bạn hãy active lại");
+    DEPARTMENT_ALREADY_EXISTS(1005,"Phòng ban đã tồn tại, bạn hãy active lại"),
+    POSITION_NOT_FOUND(1008,"Không tìm thấy chức vụ này"),
+    LEAVE_NOT_FOUND(1009,"Không tìm thấy đơn này"),
+    LEAVE_NOT_CANCEL(1010,"Không thể huỷ đơn này"),
+    LEAVE_NOT_APPROVE(1011,"Không thể duyệt đơn này");
 
     private int code;
     private String message;

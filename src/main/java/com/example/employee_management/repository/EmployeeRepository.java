@@ -11,4 +11,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     Optional<Employee> findByAccount(Account account);
     // Lấy ra danh sách các cái user chưa được sắp và phòng và vị trí nào
     List<Employee> findByDepartmentIsNullAndPositionIsNull();
+    // Lấy ra danh sách nhân viên trong phòng đó
+    List<Employee> findByDepartmentId(Long departmentId);
 }

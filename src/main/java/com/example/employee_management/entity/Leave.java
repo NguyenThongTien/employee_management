@@ -26,7 +26,9 @@ public class Leave {
     String createdAt;
     String approvedAt;
     String rejectReason;
-
-    @OneToMany(mappedBy = "leave")
-    private List<Employee> employees;
+    // Một Leave thuộc về một Employee
+    // Một Employee có thể có nhiều Leave
+    @ManyToOne
+    @JoinColumn(name = "employee_id", nullable = false)
+    private Employee employee;
 }

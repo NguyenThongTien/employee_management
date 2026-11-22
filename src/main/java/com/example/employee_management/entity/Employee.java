@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 @Builder
 @Entity
 @AllArgsConstructor
@@ -33,9 +35,9 @@ public class Employee {
     @JoinColumn(name = "position_id")
     private Position position;
 
-    @ManyToOne
-    @JoinColumn(name = "leave_id")
-    private Leave leave;
+    // Một Employee có thể có nhiều Leave
+    @OneToMany(mappedBy = "employee")
+    private List<Leave> leaves;
 
     @ManyToOne
     @JoinColumn(name = "attendance_id")

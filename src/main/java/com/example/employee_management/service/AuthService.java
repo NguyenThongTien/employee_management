@@ -65,10 +65,9 @@ public class AuthService {
 //        employee.setHireDate(request.getHireDate());
         employee.setAccount(savedAccount);
         employee.setRole(role);
-        employee.setDepartment(null);
-        employee.setPosition(null);
-        employee.setLeave(null);
-        employee.setAttendance(null);
+//        employee.setDepartment(null);
+//        employee.setPosition(null);
+//        employee.setAttendance(null);
 
         Employee savedEmployee = employeeRepository.save(employee);
 
